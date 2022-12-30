@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {Text, View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {
@@ -8,16 +7,17 @@ import {
   IconHomeO,
   IconPeople,
   IconPeopleO,
-} from './src/assets/iconfont';
-import {MainTabBar} from './src/navigator/MainTabBar';
-import IconContact from './src/assets/iconfont/IconContact';
-import { HomeScreen } from './src/pages/home';
-import { ContactScreen } from './src/pages/contact';
-import { MeScreen } from './src/pages/me';
+} from './assets/iconfont';
+import {MainTabBar} from './navigator/MainTabBar';
+import IconContact from './assets/iconfont/IconContact';
+import { HomeScreen } from './pages/home';
+import { ContactScreen } from './pages/contact';
+import { MeScreen } from './pages/me';
 
 const Tab = createBottomTabNavigator();
 
 export default function App() {
+
   return (
     <NavigationContainer>
       <Tab.Navigator
