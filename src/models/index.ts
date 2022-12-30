@@ -1,9 +1,8 @@
 import {makeObservable, observable, action} from 'mobx';
 import {computed} from 'mobx';
-import {createContext, useContext} from "react"
-import React from 'react';
-
-export const StoreContext = createContext<TodoList|null>(null);
+import React, { createContext } from 'react';
+import { UserStore } from "./account";
+import { ContactStore } from './contact';
 
 class Todo {
   id = Math.random();
@@ -31,30 +30,49 @@ class TodoList {
     return this.todos.filter(todo => !todo.finished).length;
   }
 
-  constructor(todos) {
+  constructor(todos: Todo[]) {
     makeObservable(this, {
       todos: observable,
       unfinishedTodoCount: computed,
       addItem: action,
-      removeItem: action
+      removeItem: action,
     });
     this.todos = todos;
   }
 
-  addItem () {
-    this.todos.push(new Todo(new Date().toString().substring(0, 24)))
+  addItem() {
+    this.todos.push(new Todo(new Date().toString().substring(0, 24)));
   }
 
   removeItem(index: number) {
-    this.todos.splice(index, 1)
+    this.todos.splice(index, 1);
   }
 }
 
-export const rootStore = new TodoList([
-  new Todo('Get Coffee'),
-  new Todo('Write simpler code'),
-]);
+export class RootStore {
+  userStore: UserStore;
+  contactStore: ContactStore;
+  todos: TodoList;
 
-export const useStore = () => {
+  constructor () {
+    this.userStore = new UserStore(this);
+    this.contactStore = new ContactStore(this);
+
+    this.todos = new TodoList([
+      new Todo('Get Coffee'),
+      new Todo('Write simpler code'),
+    ]);
+  }
+}
+
+export const rootStore = new RootStore();
+
+export const StoreContext = createContext<{
+  userStore: UserStore;
+  contactStore: ContactStore;
+  todos: TodoList;
+}>(rootStore);
+
+export function useStore() {
   return React.useContext(StoreContext)
 }

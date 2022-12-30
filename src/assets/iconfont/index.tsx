@@ -4,6 +4,8 @@
 import React, { FunctionComponent } from 'react';
 import { ViewProps } from 'react-native';
 import { GProps } from 'react-native-svg';
+import IconEye from './IconEye';
+import IconNoEye from './IconNoEye';
 import IconContactO from './IconContactO';
 import IconPeople from './IconPeople';
 import IconHome from './IconHome';
@@ -21,6 +23,8 @@ import IconPhotoFill from './IconPhotoFill';
 import IconVideoCallFill from './IconVideoCallFill';
 import IconFile from './IconFile';
 import IconFile1 from './IconFile1';
+export { default as IconEye } from './IconEye';
+export { default as IconNoEye } from './IconNoEye';
 export { default as IconContactO } from './IconContactO';
 export { default as IconPeople } from './IconPeople';
 export { default as IconHome } from './IconHome';
@@ -39,7 +43,7 @@ export { default as IconVideoCallFill } from './IconVideoCallFill';
 export { default as IconFile } from './IconFile';
 export { default as IconFile1 } from './IconFile1';
 
-export type IconNames = 'icon-contact_o' | 'icon-people' | 'icon-home' | 'icon-home_o' | 'icon-manage' | 'icon-manage_o' | 'icon-people_o' | 'icon-cart' | 'icon-cart-o' | 'icon-contact' | 'icon-camera_fill' | 'icon-position_fill' | 'icon-voice_fill' | 'icon-photo_fill' | 'icon-video_call_fill' | 'icon-file' | 'icon-file1';
+export type IconNames = 'icon-eye' | 'icon-no_eye' | 'icon-contact_o' | 'icon-people' | 'icon-home' | 'icon-home_o' | 'icon-manage' | 'icon-manage_o' | 'icon-people_o' | 'icon-cart' | 'icon-cart-o' | 'icon-contact' | 'icon-camera_fill' | 'icon-position_fill' | 'icon-voice_fill' | 'icon-photo_fill' | 'icon-video_call_fill' | 'icon-file' | 'icon-file1';
 
 interface Props extends GProps, ViewProps {
   name: IconNames;
@@ -49,40 +53,44 @@ interface Props extends GProps, ViewProps {
 
 let IconFont: FunctionComponent<Props> = ({ name, ...rest }) => {
   switch (name) {
+    case 'icon-eye':
+      return <IconEye key="1" {...rest} />;
+    case 'icon-no_eye':
+      return <IconNoEye key="2" {...rest} />;
     case 'icon-contact_o':
-      return <IconContactO key="1" {...rest} />;
+      return <IconContactO key="3" {...rest} />;
     case 'icon-people':
-      return <IconPeople key="2" {...rest} />;
+      return <IconPeople key="4" {...rest} />;
     case 'icon-home':
-      return <IconHome key="3" {...rest} />;
+      return <IconHome key="5" {...rest} />;
     case 'icon-home_o':
-      return <IconHomeO key="4" {...rest} />;
+      return <IconHomeO key="6" {...rest} />;
     case 'icon-manage':
-      return <IconManage key="5" {...rest} />;
+      return <IconManage key="7" {...rest} />;
     case 'icon-manage_o':
-      return <IconManageO key="6" {...rest} />;
+      return <IconManageO key="8" {...rest} />;
     case 'icon-people_o':
-      return <IconPeopleO key="7" {...rest} />;
+      return <IconPeopleO key="9" {...rest} />;
     case 'icon-cart':
-      return <IconCart key="8" {...rest} />;
+      return <IconCart key="10" {...rest} />;
     case 'icon-cart-o':
-      return <IconCartO key="9" {...rest} />;
+      return <IconCartO key="11" {...rest} />;
     case 'icon-contact':
-      return <IconContact key="10" {...rest} />;
+      return <IconContact key="12" {...rest} />;
     case 'icon-camera_fill':
-      return <IconCameraFill key="11" {...rest} />;
+      return <IconCameraFill key="13" {...rest} />;
     case 'icon-position_fill':
-      return <IconPositionFill key="12" {...rest} />;
+      return <IconPositionFill key="14" {...rest} />;
     case 'icon-voice_fill':
-      return <IconVoiceFill key="13" {...rest} />;
+      return <IconVoiceFill key="15" {...rest} />;
     case 'icon-photo_fill':
-      return <IconPhotoFill key="14" {...rest} />;
+      return <IconPhotoFill key="16" {...rest} />;
     case 'icon-video_call_fill':
-      return <IconVideoCallFill key="15" {...rest} />;
+      return <IconVideoCallFill key="17" {...rest} />;
     case 'icon-file':
-      return <IconFile key="16" {...rest} />;
+      return <IconFile key="18" {...rest} />;
     case 'icon-file1':
-      return <IconFile1 key="17" {...rest} />;
+      return <IconFile1 key="19" {...rest} />;
   }
 
   return null;
