@@ -1,0 +1,35 @@
+/* tslint:disable */
+/* eslint-disable */
+
+import React, { FunctionComponent } from 'react';
+import { ViewProps } from 'react-native';
+import { Svg, GProps, Path } from 'react-native-svg';
+import { getIconColor } from './helper';
+
+interface Props extends GProps, ViewProps {
+  size?: number;
+  color?: string | string[];
+}
+
+let IconVoiceFill: FunctionComponent<Props> = ({ size, color, ...rest }) => {
+  return (
+    <Svg viewBox="0 0 1024 1024" width={size} height={size} {...rest}>
+      <Path
+        d="M512 596.375L512 596.375c77.34375 0 140.625-63.28125 140.625-140.625L652.625 287c0-77.34375-63.28125-140.625-140.625-140.625l0 0c-77.34375 0-140.625 63.28125-140.625 140.625l0 168.75C371.375 533.09375 434.65625 596.375 512 596.375z"
+        fill={getIconColor(color, 0, '#333333')}
+      />
+      <Path
+        d="M762.13671875 494.7734375c2.37304688-15.38085938-8.0859375-29.70703125-23.46679688-32.08007813-15.38085938-2.28515625-29.70703125 8.17382813-32.08007812 23.46679688C691.82421875 581.08203125 608.24023438 652.625 512 652.625c-96.24023438 0-179.91210938-71.63085938-194.58984375-166.55273438-2.37304688-15.38085938-16.78710938-25.83984375-32.08007813-23.46679687-15.38085938 2.37304688-25.83984375 16.69921875-23.46679687 32.08007813 17.75390625 114.69726563 108.984375 200.21484375 222.01171875 212.51953124L483.875 793.25l-84.375 0c-15.55664063 0-28.125 12.56835938-28.125 28.125s12.56835938 28.125 28.125 28.125l225 0c15.55664063 0 28.125-12.56835938 28.125-28.125s-12.56835938-28.125-28.125-28.125l-84.375 0 0-86.04492188C653.06445313 694.90039063 744.3828125 609.47070313 762.13671875 494.7734375z"
+        fill={getIconColor(color, 1, '#333333')}
+      />
+    </Svg>
+  );
+};
+
+IconVoiceFill.defaultProps = {
+  size: 18,
+};
+
+IconVoiceFill = React.memo ? React.memo(IconVoiceFill) : IconVoiceFill;
+
+export default IconVoiceFill;

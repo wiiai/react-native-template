@@ -1,0 +1,9 @@
+{
+    "symbol_url": "http://at.alicdn.com/t/c/font_3844435_lzxrmi5qeec.js",
+    "use_typescript": true,
+    "save_dir": "./src/assets/iconfont",
+    "generate_mode": "all-in-one",
+    "trim_icon_prefix": "",
+    "default_icon_size": 18,
+    "summary_component_name": "Icon"
+  }
