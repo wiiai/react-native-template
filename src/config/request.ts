@@ -1,12 +1,17 @@
 import axios, {AxiosRequestConfig} from 'axios';
-import { err } from 'react-native-svg/lib/typescript/xml';
+import {getToken} from '@/utils/auth';
 import {baseURL} from './index';
 
 const instance = axios.create();
 
 instance.interceptors.request.use(
   function (config) {
-    console.log(config)
+    const headers: any = {
+      ...(config.headers || {}),
+      'content-type': 'application/json; charset=utf-8',
+      token: getToken() || '',
+    };
+    config.headers = headers;
     return config;
   },
   function (error) {
@@ -20,7 +25,7 @@ instance.interceptors.response.use(
     return response.data;
   },
   function (error) {
-    console.log(error)
+    console.log(error);
     return Promise.reject(error);
   },
 );
@@ -35,9 +40,9 @@ async function request<T>(options: AxiosRequestConfig): Promise<T> {
   const p1 = instance({
     ...options,
     url: baseURL + options.url,
-    method: options.method || 'POST'
+    method: options.method || 'POST',
   });
-  console.log(111, baseURL + options.url)
+
   const p2 = sleep();
   return Promise.all([p1, p2]).then(res => {
     return res[0] as unknown as T;
