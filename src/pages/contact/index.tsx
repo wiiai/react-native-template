@@ -103,7 +103,7 @@ export const ContactScreen = observer(() => {
                 <HStack flex={1}>
                   <Avatar size="48px" source={{uri: item.avatar}} />
                   <VStack alignItems={'center'} justifyContent="center">
-                    <Text style={{marginLeft: 10}}>{item.nickname}</Text>
+                    <Text style={{marginLeft: 10, fontSize: 18 }}>{item.nickname}</Text>
                   </VStack>
                 </HStack>
                 <Button colorScheme={'fuchsia'} height={30} variant={'subtle'} size="xs">私信</Button>
