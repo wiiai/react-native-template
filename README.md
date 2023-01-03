@@ -14,6 +14,7 @@ react native template
 | 本地存储 | @react-native-async-storage/async-storage       |
 | 时间处理 | [dayjs](https://day.js.org/docs/en/installation/typescript)                                           |
 | UI 库    | [native-base](https://docs.nativebase.io/)      |
+| 唯一 ID | uuid & react-native-get-random-values |
 
 ### 2.2 内部架构
 
