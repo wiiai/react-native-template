@@ -3,5 +3,6 @@
         "iconfont",
         "Pressable",
         "todos"
-    ]
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

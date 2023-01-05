@@ -249,6 +249,10 @@ android {
 }
 
 dependencies {
+    // notification
+    // implementation 'com.google.firebase:firebase-core:9.6.1'
+    // notification
+
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
     //noinspection GradleDynamicVersion

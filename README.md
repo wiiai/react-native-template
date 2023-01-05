@@ -6,15 +6,16 @@ react native template
 
 ### 2.1 技术选型
 
-| 名称     | 方案                                            |
-| -------- | ----------------------------------------------- |
-| 路由库   | [react navigation](https://reactnavigation.org) |
-| 状态管理 | mobx + context                                  |
-| SVG 图标 | react-native-svg 搭配 react-native-iconfont-cli |
-| 本地存储 | @react-native-async-storage/async-storage       |
-| 时间处理 | [dayjs](https://day.js.org/docs/en/installation/typescript)                                           |
-| UI 库    | [native-base](https://docs.nativebase.io/)      |
-| 唯一 ID | uuid & react-native-get-random-values |
+| 名称     | 方案                                                                                            |
+| -------- | ----------------------------------------------------------------------------------------------- |
+| 路由库   | [react navigation](https://reactnavigation.org)                                                 |
+| 状态管理 | mobx + context                                                                                  |
+| SVG 图标 | react-native-svg 搭配 react-native-iconfont-cli                                                 |
+| 本地存储 | @react-native-async-storage/async-storage                                                       |
+| 时间处理 | [dayjs](https://day.js.org/docs/en/installation/typescript)                                     |
+| UI 库    | [native-base](https://docs.nativebase.io/)                                                      |
+| 唯一 ID  | uuid & react-native-get-random-values                                                           |
+| 消息推送 | [react-native-push-notification](https://github.com/zo0r/react-native-push-notification#readme) |
 
 ### 2.2 内部架构
 
@@ -64,34 +65,37 @@ src
 ```
 
 ### 2.3 启动流程
+
 ```tsx
 import * as React from 'react';
 import {rootStore, StoreContext} from './models';
 import Navigator from './navigator';
-import { NativeBaseProvider } from "native-base";
-import { loadCacheUInfo } from './utils/auth';
-import { View, Text } from 'react-native';
+import {NativeBaseProvider} from 'native-base';
+import {loadCacheUInfo} from './utils/auth';
+import {View, Text} from 'react-native';
 
 export default function App() {
   const [isLoaded, setIsLoaded] = React.useState(false);
 
   React.useEffect(() => {
     beforeBootstrap().then(() => {
-      setIsLoaded(true)
-    })
+      setIsLoaded(true);
+    });
   }, []);
 
   // 在应用主框架启动之前要干的事情
   // 可以在这里配置你想干的事情
   const beforeBootstrap = async () => {
     // 从 storage 中取出数据, 加载到内存中
-    return await loadCacheUInfo()
-  }
+    return await loadCacheUInfo();
+  };
 
   if (!isLoaded) {
-    return <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>加载中...</Text>
-    </View>
+    return (
+      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <Text>加载中...</Text>
+      </View>
+    );
   }
 
   return (
