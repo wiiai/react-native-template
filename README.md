@@ -16,8 +16,8 @@ react native template
 | UI 库    | [native-base](https://docs.nativebase.io/)                                                      |
 | 唯一 ID  | uuid & react-native-get-random-values                                                           |
 | 消息推送 | [react-native-push-notification](https://github.com/zo0r/react-native-push-notification#readme) |
-| 分包拆包 | TODO |
 | 日志工具 | [react-native-logs](https://github.com/onubo/react-native-logs) |
+| 分包拆包 | TODO |
 
 ### 2.2 内部架构
 
