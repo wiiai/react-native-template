@@ -18,7 +18,9 @@ export class ContactStore {
   list: IContactItem[] = [];
 
   async fetchContacts() {
-    this.loading = true;
+    runInAction(() => {
+      this.loading = true;
+    })
     try {
       const res: AwaitedFun<typeof getContactList> = await getContactList({});
       runInAction(() => {
@@ -29,7 +31,6 @@ export class ContactStore {
       runInAction(() => {
         this.loading = false;
       });
-      this.loading = false;
     }
   }
 }

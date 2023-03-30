@@ -21,7 +21,9 @@ export class UserStore {
   userInfo: IUserInfo | null = getUserInfo();
 
   async login(params: ILoginReq) {
-    this.loading = true;
+    runInAction(() => {
+      this.loading = true;
+    });
     try {
       const res: AwaitedFun<typeof AccountAPI.login> = await AccountAPI.login(
         params,
@@ -36,7 +38,6 @@ export class UserStore {
       runInAction(() => {
         this.loading = false;
       });
-      this.loading = false;
     }
   }
 

@@ -1,14 +1,20 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import {BottomTabBarProps} from '@react-navigation/bottom-tabs';
-import { isIphoneX } from '../utils/screen';
+import {isIphoneX} from '../utils/screen';
 
 const activeColor = '#333';
 
-export function MainTabBar({state, descriptors, navigation}: BottomTabBarProps) {
+export function MainTabBar({
+  state,
+  descriptors,
+  navigation,
+}: BottomTabBarProps) {
   const renderList = () => {
     return state.routes.map((route, index) => {
       const {options} = descriptors[route.key];
+      const isFocused = state.index === index;
+
       const label =
         options.tabBarLabel !== undefined
           ? options.tabBarLabel
@@ -16,7 +22,15 @@ export function MainTabBar({state, descriptors, navigation}: BottomTabBarProps) 
           ? options.title
           : route.name;
 
-      const isFocused = state.index === index;
+      const text =
+        typeof label === 'function'
+          ? label({
+              focused: isFocused,
+              position: 'below-icon',
+              color: '#333',
+              children: '',
+            })
+          : label;
 
       const onPress = () => {
         const event = navigation.emit({
@@ -24,12 +38,13 @@ export function MainTabBar({state, descriptors, navigation}: BottomTabBarProps) 
           target: route.key,
           canPreventDefault: true,
         });
+
         if (!isFocused && !event.defaultPrevented) {
           // The `merge: true` option makes sure that the params inside the tab screen are preserved
           /*@ts-ignore*/
           navigation.navigate({
             name: route.name,
-            merge: true
+            merge: true,
           });
         }
       };
@@ -62,7 +77,7 @@ export function MainTabBar({state, descriptors, navigation}: BottomTabBarProps) 
               fontSize: 10,
               color: isFocused ? activeColor : '#888',
             }}>
-            {label}
+            {text}
           </Text>
         </TouchableOpacity>
       );
