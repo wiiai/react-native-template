@@ -1,3 +1,11 @@
+/*
+ * @Author: GaoXiong
+ * @LastEditors: GaoXiong
+ * @Date: 2023-01-04 18:54:10
+ * @LastEditTime: 2023-04-11 22:50:43
+ * @FilePath: /react-native-template/android/app/src/main/java/com/wowimrn/MainApplication.java
+ * @Description: 
+ */
 package com.wowimrn;
 
 import android.app.Application;
@@ -12,6 +20,7 @@ import com.facebook.soloader.SoLoader;
 import com.wowimrn.newarchitecture.MainApplicationReactNativeHost;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+import com.rnfs.RNFSPackage; 
 
 public class MainApplication extends Application implements ReactApplication {
 

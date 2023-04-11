@@ -18,6 +18,7 @@ react native template
 | 消息推送 | [react-native-push-notification](https://github.com/zo0r/react-native-push-notification#readme)                         |
 | 日志工具 | [react-native-logs](https://github.com/onubo/react-native-logs)                                                         |
 | 动画     | [lottie-react-native](https://github.com/lottie-react-native/lottie-react-native) [lottie](https://airbnb.io/lottie/#/) |
+| 文件管理 | [react-native-fs](https://github.com/itinance/react-native-fs) |
 | 分包拆包 | TODO                                                                                                                    |
 
 ### 2.2 内部架构

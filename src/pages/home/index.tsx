@@ -73,9 +73,18 @@ export const HomeScreen = observer(() => {
         <View style={{marginTop: 20, paddingHorizontal: 12}}>
           <Button
             onPress={() =>
-              navigation.navigate('AnimateScreen')
+              navigation.navigate('Animate')
             }>
             <Text style={{color: '#fff'}}>Go Animate</Text>
+          </Button>
+        </View>
+
+        <View style={{marginTop: 20, paddingHorizontal: 12}}>
+          <Button
+            onPress={() =>
+              navigation.navigate('Fs')
+            }>
+            <Text style={{color: '#fff'}}>File System</Text>
           </Button>
         </View>
 

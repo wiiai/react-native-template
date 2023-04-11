@@ -253,6 +253,8 @@ dependencies {
     // implementation 'com.google.firebase:firebase-core:9.6.1'
     // notification
 
+    implementation project(':react-native-fs')
+
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
     //noinspection GradleDynamicVersion
