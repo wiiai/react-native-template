@@ -1,3 +1,11 @@
+/*
+ * @Author: GaoXiong
+ * @LastEditors: GaoXiong
+ * @Date: 2023-01-04 18:54:11
+ * @LastEditTime: 2023-04-11 23:01:13
+ * @FilePath: /react-native-template/src/navigator/index.tsx
+ * @Description: 
+ */
 import React from 'react';
 import {observer} from 'mobx-react-lite';
 import {
@@ -15,6 +23,7 @@ import MainTabScreen, {MainTabParamList} from './MainTab';
 import H5Screen from '@/pages/h5';
 import LoginScreen from '@/pages/login';
 import AnimateScreen from '@/pages/animate';
+import {FsScreen} from '@/pages/fs';
 
 export type RootStackParamList = {
   MainTab: NavigatorScreenParams<MainTabParamList>;
@@ -24,7 +33,8 @@ export type RootStackParamList = {
     title?: string;
   };
   Login: undefined;
-  AnimateScreen: undefined;
+  Animate: undefined;
+  Fs: undefined;
 };
 
 export type RootStackNavigation = StackNavigationProp<RootStackParamList>;
@@ -60,9 +70,14 @@ function RootStackScreen() {
           component={H5Screen}
         />
         <RootStack.Screen
-          name="AnimateScreen"
+          name="Animate"
           options={hideHeaderOptions}
           component={AnimateScreen}
+        />
+        <RootStack.Screen
+          name="Fs"
+          options={hideHeaderOptions}
+          component={FsScreen}
         />
       </RootStack.Group>
       <RootStack.Group screenOptions={{presentation: 'modal'}}>

@@ -18,6 +18,7 @@ react native template
 | 消息推送 | [react-native-push-notification](https://github.com/zo0r/react-native-push-notification#readme)                         |
 | 日志工具 | [react-native-logs](https://github.com/onubo/react-native-logs)                                                         |
 | 动画     | [lottie-react-native](https://github.com/lottie-react-native/lottie-react-native) [lottie](https://airbnb.io/lottie/#/) |
+| 文件管理 | [react-native-fs](https://github.com/itinance/react-native-fs) |
 | 分包拆包 | TODO                                                                                                                    |
 
 ### 2.2 内部架构
@@ -139,9 +140,12 @@ npx iconfont-rn
     <td><img src="./screenshot/full_bg.png" style="width: 240px" /></td>
     <td><img src="./screenshot/login_screen.png" style="width: 240px" /></td>
   </tr>
-    <tr>
+  <tr>
     <td><img src="./screenshot/me_un_login.png" style="width: 240px" /></td>
     <td><img src="./screenshot/me_login.png" style="width: 240px" /></td>
     <td><img src="/screenshot/animate.gif" style="width: 240px" /></td>
+  </tr>
+  <tr>
+    <td><img src="./screenshot/fs.png" style="width: 240px" /></td>
   </tr>
 </table>
