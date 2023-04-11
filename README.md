@@ -1,6 +1,5 @@
 ## 1. 研究背景
-
-react native template
+react native template 希望有时间的朋友一起来完善。
 
 ## 2. 技术选型
 
