@@ -17,7 +17,7 @@ export default function App() {
   // 在应用主框架启动之前要干的事情
   // 可以在这里配置你想干的事情
   const beforeBootstrap = async () => {
-    // 从 storage 中取出数据, 加载到内存中
+    // 从 storage 中取出数据 加载到内存中
     return await loadCacheUInfo()
   }
 

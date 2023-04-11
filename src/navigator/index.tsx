@@ -14,6 +14,7 @@ import {DetailScreen} from '@/pages/detail';
 import MainTabScreen, {MainTabParamList} from './MainTab';
 import H5Screen from '@/pages/h5';
 import LoginScreen from '@/pages/login';
+import AnimateScreen from '@/pages/animate';
 
 export type RootStackParamList = {
   MainTab: NavigatorScreenParams<MainTabParamList>;
@@ -23,6 +24,7 @@ export type RootStackParamList = {
     title?: string;
   };
   Login: undefined;
+  AnimateScreen: undefined;
 };
 
 export type RootStackNavigation = StackNavigationProp<RootStackParamList>;
@@ -56,6 +58,11 @@ function RootStackScreen() {
           name="H5"
           options={hideHeaderOptions}
           component={H5Screen}
+        />
+        <RootStack.Screen
+          name="AnimateScreen"
+          options={hideHeaderOptions}
+          component={AnimateScreen}
         />
       </RootStack.Group>
       <RootStack.Group screenOptions={{presentation: 'modal'}}>

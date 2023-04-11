@@ -6,18 +6,19 @@ react native template
 
 ### 2.1 技术选型
 
-| 名称     | 方案                                                                                            |
-| -------- | ----------------------------------------------------------------------------------------------- |
-| 路由库   | [react navigation](https://reactnavigation.org)                                                 |
-| 状态管理 | mobx + context                                                                                  |
-| SVG 图标 | react-native-svg 搭配 react-native-iconfont-cli                                                 |
-| 本地存储 | @react-native-async-storage/async-storage                                                       |
-| 时间处理 | [dayjs](https://day.js.org/docs/en/installation/typescript)                                     |
-| UI 库    | [native-base](https://docs.nativebase.io/)                                                      |
-| 唯一 ID  | uuid & react-native-get-random-values                                                           |
-| 消息推送 | [react-native-push-notification](https://github.com/zo0r/react-native-push-notification#readme) |
-| 日志工具 | [react-native-logs](https://github.com/onubo/react-native-logs) |
-| 分包拆包 | TODO |
+| 名称     | 方案                                                                                                                    |
+| -------- | ----------------------------------------------------------------------------------------------------------------------- |
+| 路由库   | [react navigation](https://reactnavigation.org)                                                                         |
+| 状态管理 | mobx + context                                                                                                          |
+| SVG 图标 | react-native-svg 搭配 react-native-iconfont-cli                                                                         |
+| 本地存储 | @react-native-async-storage/async-storage                                                                               |
+| 时间处理 | [dayjs](https://day.js.org/docs/en/installation/typescript)                                                             |
+| UI 库    | [native-base](https://docs.nativebase.io/)                                                                              |
+| 唯一 ID  | uuid & react-native-get-random-values                                                                                   |
+| 消息推送 | [react-native-push-notification](https://github.com/zo0r/react-native-push-notification#readme)                         |
+| 日志工具 | [react-native-logs](https://github.com/onubo/react-native-logs)                                                         |
+| 动画     | [lottie-react-native](https://github.com/lottie-react-native/lottie-react-native) [lottie](https://airbnb.io/lottie/#/) |
+| 分包拆包 | TODO                                                                                                                    |
 
 ### 2.2 内部架构
 
@@ -141,5 +142,6 @@ npx iconfont-rn
     <tr>
     <td><img src="./screenshot/me_un_login.png" style="width: 240px" /></td>
     <td><img src="./screenshot/me_login.png" style="width: 240px" /></td>
+    <td><img src="/screenshot/animate.gif" style="width: 240px" /></td>
   </tr>
 </table>

@@ -1,3 +1,11 @@
+/*
+ * @Author: GaoXiong
+ * @LastEditors: GaoXiong
+ * @LastEditTime: 2023-04-11 10:11:34
+ * @FilePath: /react-native-template/src/models/account.ts
+ * @Description: 
+ */
+
 import {runInAction, makeAutoObservable, observable} from 'mobx';
 import storage from '../utils/storage';
 import {RootStore} from '.';
@@ -13,7 +21,7 @@ export class UserStore {
     this.rootStore = store;
     makeAutoObservable(this, {
       loading: observable,
-      userInfo: observable,
+      userInfo: observable
     });
   }
 

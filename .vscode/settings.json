@@ -1,8 +1,13 @@
 {
-    "cSpell.words": [
-        "iconfont",
-        "Pressable",
-        "todos"
-    ],
-    "java.configuration.updateBuildConfiguration": "interactive"
+  "cSpell.words": ["iconfont", "Pressable", "todos"],
+  "java.configuration.updateBuildConfiguration": "interactive",
+  // 头部注释
+  "fileheader.customMade": {
+    "Author": "git config user.name",
+    "LastEditors": "git config user.name", // 文件最后编辑者 与Author字段一致
+    "Date": "Do not edit", // 文件创建时间(不变)
+    "LastEditTime": "Do not edit", // 文件最后编辑时间
+    "FilePath": "Do not edit", // 文件在项目中的相对路径 自动更新
+    "Description": "" // 介绍文件的作用、文件的入参、出参。
+  }
 }
