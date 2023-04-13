@@ -1,6 +1,7 @@
 ## 1. 研究背景
-react native template 希望有时间的朋友一起来完善，扫码进入微信交流群：
-![20230413173803](http://s3.airtlab.com/blog/20230413173803.png)
+react native 快速开发模板，希望有时间的朋友一起来完善，微信交流群：
+
+<img src="./screenshot/wx.png" style="width: 180px" />
 
 ## 2. 技术选型
 
