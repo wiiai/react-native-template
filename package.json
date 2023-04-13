@@ -31,6 +31,7 @@
     "react": "18.1.0",
     "react-native": "0.70.6",
     "react-native-camera": "^4.2.1",
+    "react-native-drop-shadow": "^0.0.6",
     "react-native-fs": "^2.20.0",
     "react-native-gesture-handler": "^2.8.0",
     "react-native-logs": "^5.0.1",

@@ -21,6 +21,7 @@ react native 快速开发模板，希望有时间的朋友一起来完善，微�
 | 动画     | [lottie-react-native](https://github.com/lottie-react-native/lottie-react-native) [lottie](https://airbnb.io/lottie/#/) |
 | 文件管理 | [react-native-fs](https://github.com/itinance/react-native-fs) |
 | 扫二维码 | [react-native-camera](https://react-native-camera.github.io/react-native-camera/) |
+| 阴影效果 | [react-native-drop-shadow](https://www.npmjs.com/package/react-native-drop-shadow) |
 | 分包拆包 | TODO                                                                                                                    |
 
 ### 2.2 内部架构

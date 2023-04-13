@@ -9,6 +9,7 @@ import {BottomTabScreenProps} from '@react-navigation/bottom-tabs';
 import {MainTabParamList} from '@/navigator/MainTab';
 import {StackScreenProps} from '@react-navigation/stack';
 import {Button} from 'native-base';
+import DropShadow from 'react-native-drop-shadow';
 
 type IHomeNavigateProps = CompositeScreenProps<
   BottomTabScreenProps<MainTabParamList, 'Home'>,
@@ -22,6 +23,29 @@ export const HomeScreen = observer(() => {
   return (
     <BPage showNavBar={false}>
       <View style={{flex: 1}}>
+        <View
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            marginTop: 30
+          }}>
+          <DropShadow
+            style={{
+              alignItems: 'center',
+              shadowColor: '#2e4ae3',
+              shadowOffset: {
+                width: 0,
+                height: 0,
+              },
+              shadowOpacity: 1,
+              shadowRadius: 5,
+            }}>
+            <Text style={{ fontSize: 20, fontWeight: '600' }}>Hello, Welcome To</Text>
+            <Text style={{ fontSize: 20, fontWeight: '600' }}>Wiiai's React-Native</Text>
+          </DropShadow>
+        </View>
+
         <View style={{paddingHorizontal: 12, marginTop: 20}}>
           {store.todos?.todos.map((it, index) => {
             return (
@@ -29,7 +53,7 @@ export const HomeScreen = observer(() => {
                 key={index}
                 style={{marginBottom: 12, flexDirection: 'row'}}>
                 <Text>
-                  {index}. {it.title}
+                  {index + 1}. {it.title}
                 </Text>
                 <View style={{marginLeft: 12}}>
                   <TouchableWithoutFeedback
@@ -71,28 +95,19 @@ export const HomeScreen = observer(() => {
         </View>
 
         <View style={{marginTop: 20, paddingHorizontal: 12}}>
-          <Button
-            onPress={() =>
-              navigation.navigate('Animate')
-            }>
+          <Button onPress={() => navigation.navigate('Animate')}>
             <Text style={{color: '#fff'}}>Go Animate</Text>
           </Button>
         </View>
 
         <View style={{marginTop: 20, paddingHorizontal: 12}}>
-          <Button
-            onPress={() =>
-              navigation.navigate('Fs')
-            }>
+          <Button onPress={() => navigation.navigate('Fs')}>
             <Text style={{color: '#fff'}}>File System</Text>
           </Button>
         </View>
 
         <View style={{marginTop: 20, paddingHorizontal: 12}}>
-          <Button
-            onPress={() =>
-              navigation.navigate('Camera')
-            }>
+          <Button onPress={() => navigation.navigate('Camera')}>
             <Text style={{color: '#fff'}}>Camera</Text>
           </Button>
         </View>

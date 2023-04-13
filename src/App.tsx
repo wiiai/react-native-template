@@ -2,7 +2,7 @@
  * @Author: GaoXiong
  * @LastEditors: GaoXiong
  * @Date: 2023-04-11 08:40:16
- * @LastEditTime: 2023-04-13 18:02:38
+ * @LastEditTime: 2023-04-13 18:45:38
  * @FilePath: /react-native-template/src/App.tsx
  * @Description:
  */
@@ -14,6 +14,7 @@ import {NativeBaseProvider} from 'native-base';
 import {loadCacheUInfo} from './utils/auth';
 import {View, Text} from 'react-native';
 import {logger} from './utils/logger';
+import { nativeTheme } from './config/theme';
 
 export default function App() {
   const [isLoaded, setIsLoaded] = React.useState(false);
@@ -42,7 +43,7 @@ export default function App() {
 
   return (
     <StoreContext.Provider value={rootStore}>
-      <NativeBaseProvider>
+      <NativeBaseProvider theme={nativeTheme}>
         <Navigator />
       </NativeBaseProvider>
     </StoreContext.Provider>

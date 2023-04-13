@@ -1,3 +1,11 @@
+/*
+ * @Author: GaoXiong
+ * @LastEditors: GaoXiong
+ * @Date: 2023-01-04 18:54:11
+ * @LastEditTime: 2023-04-13 18:55:31
+ * @FilePath: /react-native-template/src/models/index.ts
+ * @Description: 
+ */
 import {makeObservable, observable, action} from 'mobx';
 import {computed} from 'mobx';
 import React, { createContext } from 'react';
@@ -58,10 +66,7 @@ export class RootStore {
     this.userStore = new UserStore(this);
     this.contactStore = new ContactStore(this);
 
-    this.todos = new TodoList([
-      new Todo('Get Coffee'),
-      new Todo('Write simpler code'),
-    ]);
+    this.todos = new TodoList([]);
   }
 }
 
