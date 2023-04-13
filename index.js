@@ -1,3 +1,11 @@
+/*
+ * @Author: GaoXiong
+ * @LastEditors: GaoXiong
+ * @Date: 2023-01-04 18:54:10
+ * @LastEditTime: 2023-04-12 13:37:55
+ * @FilePath: /react-native-template/index.js
+ * @Description: 
+ */
 /**
  * @format
  */

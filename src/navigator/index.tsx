@@ -2,7 +2,7 @@
  * @Author: GaoXiong
  * @LastEditors: GaoXiong
  * @Date: 2023-01-04 18:54:11
- * @LastEditTime: 2023-04-11 23:01:13
+ * @LastEditTime: 2023-04-11 23:47:42
  * @FilePath: /react-native-template/src/navigator/index.tsx
  * @Description: 
  */
@@ -24,6 +24,7 @@ import H5Screen from '@/pages/h5';
 import LoginScreen from '@/pages/login';
 import AnimateScreen from '@/pages/animate';
 import {FsScreen} from '@/pages/fs';
+import { CameraScreen } from '@/pages/camera';
 
 export type RootStackParamList = {
   MainTab: NavigatorScreenParams<MainTabParamList>;
@@ -35,6 +36,7 @@ export type RootStackParamList = {
   Login: undefined;
   Animate: undefined;
   Fs: undefined;
+  Camera: undefined
 };
 
 export type RootStackNavigation = StackNavigationProp<RootStackParamList>;
@@ -78,6 +80,11 @@ function RootStackScreen() {
           name="Fs"
           options={hideHeaderOptions}
           component={FsScreen}
+        />
+        <RootStack.Screen
+          name="Camera"
+          options={hideHeaderOptions}
+          component={CameraScreen}
         />
       </RootStack.Group>
       <RootStack.Group screenOptions={{presentation: 'modal'}}>

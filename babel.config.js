@@ -1,3 +1,12 @@
+/*
+ * @Author: GaoXiong
+ * @LastEditors: GaoXiong
+ * @Date: 2023-01-04 18:54:10
+ * @LastEditTime: 2023-04-13 12:01:55
+ * @FilePath: /react-native-template/babel.config.js
+ * @Description: 
+ */
+
 module.exports = {
   presets: ['module:metro-react-native-babel-preset'],
   plugins:[
@@ -9,7 +18,7 @@ module.exports = {
         alias: {
           '@': './src'
         },
-      },
-    ],
+      }
+    ]
   ]
 };

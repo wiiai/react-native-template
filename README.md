@@ -18,6 +18,7 @@ react native template 希望有时间的朋友一起来完善。
 | 日志工具 | [react-native-logs](https://github.com/onubo/react-native-logs)                                                         |
 | 动画     | [lottie-react-native](https://github.com/lottie-react-native/lottie-react-native) [lottie](https://airbnb.io/lottie/#/) |
 | 文件管理 | [react-native-fs](https://github.com/itinance/react-native-fs) |
+| 扫二维码 | [react-native-camera](https://react-native-camera.github.io/react-native-camera/) |
 | 分包拆包 | TODO                                                                                                                    |
 
 ### 2.2 内部架构
@@ -113,6 +114,14 @@ export default function App() {
 
 ### 2.4 部署流程
 
+**Android**
+```shell
+# 构建生产包
+cd android && ./gradlew assembleRelease
+```
+
+**IOS**
+
 ## 3. 技术方案
 
 ### 3.1 状态管理
@@ -131,6 +140,10 @@ npx iconfont-init
 npx iconfont-rn
 ```
 
+### 3.3 react-native-camera
+修改 `ViewPropTypes` 的导入，node_modules/react-native-camera/src/RNCamera.js
+![20230413141005](http://s3.airtlab.com/blog/20230413141005.png)
+
 ## 4. 基础页面
 
 <table>
@@ -146,5 +159,6 @@ npx iconfont-rn
   </tr>
   <tr>
     <td><img src="./screenshot/fs.png" style="width: 240px" /></td>
+    <td><img src="./screenshot/scan.png" style="width: 240px" /></td>
   </tr>
 </table>
