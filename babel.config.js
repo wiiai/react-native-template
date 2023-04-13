@@ -2,7 +2,7 @@
  * @Author: GaoXiong
  * @LastEditors: GaoXiong
  * @Date: 2023-01-04 18:54:10
- * @LastEditTime: 2023-04-13 12:01:55
+ * @LastEditTime: 2023-04-13 18:12:52
  * @FilePath: /react-native-template/babel.config.js
  * @Description: 
  */

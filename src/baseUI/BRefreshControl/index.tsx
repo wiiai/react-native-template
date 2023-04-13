@@ -1,6 +1,6 @@
 import React from 'react';
 import {RefreshControl, RefreshControlProps} from 'react-native';
-import Theme from '@/utils/theme';
+import Theme from '@/config/theme';
 
 const BRefreshControl: React.FC<RefreshControlProps> = props => {
   return (

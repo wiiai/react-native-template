@@ -1,5 +1,10 @@
 {
-  "cSpell.words": ["iconfont", "Pressable", "todos"],
+  "cSpell.words": [
+    "iconfont",
+    "Pressable",
+    "RNFS",
+    "todos"
+  ],
   "java.configuration.updateBuildConfiguration": "interactive",
   // 头部注释
   "fileheader.customMade": {
