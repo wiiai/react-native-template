@@ -22,6 +22,7 @@ react native 快速开发模板，希望有时间的朋友一起来完善，微�
 | 文件管理 | [react-native-fs](https://github.com/itinance/react-native-fs) |
 | 扫二维码 | [react-native-camera](https://react-native-camera.github.io/react-native-camera/) |
 | 阴影效果 | [react-native-drop-shadow](https://www.npmjs.com/package/react-native-drop-shadow) |
+| Table | [react-native-table-component](https://github.com/wiiai/react-native-table-component) |
 | 分包拆包 | TODO                                                                                                                    |
 
 ### 2.2 内部架构

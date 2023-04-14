@@ -25,6 +25,7 @@ import LoginScreen from '@/pages/login';
 import AnimateScreen from '@/pages/animate';
 import {FsScreen} from '@/pages/fs';
 import { CameraScreen } from '@/pages/camera';
+import { TableScreen } from '@/pages/table';
 
 export type RootStackParamList = {
   MainTab: NavigatorScreenParams<MainTabParamList>;
@@ -36,7 +37,8 @@ export type RootStackParamList = {
   Login: undefined;
   Animate: undefined;
   Fs: undefined;
-  Camera: undefined
+  Camera: undefined;
+  Table: undefined;
 };
 
 export type RootStackNavigation = StackNavigationProp<RootStackParamList>;
@@ -85,6 +87,11 @@ function RootStackScreen() {
           name="Camera"
           options={hideHeaderOptions}
           component={CameraScreen}
+        />
+        <RootStack.Screen
+          name="Table"
+          options={hideHeaderOptions}
+          component={TableScreen}
         />
       </RootStack.Group>
       <RootStack.Group screenOptions={{presentation: 'modal'}}>

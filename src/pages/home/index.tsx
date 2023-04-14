@@ -28,7 +28,7 @@ export const HomeScreen = observer(() => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            marginTop: 30
+            marginTop: 30,
           }}>
           <DropShadow
             style={{
@@ -41,8 +41,12 @@ export const HomeScreen = observer(() => {
               shadowOpacity: 1,
               shadowRadius: 5,
             }}>
-            <Text style={{ fontSize: 20, fontWeight: '600' }}>Hello, Welcome To</Text>
-            <Text style={{ fontSize: 20, fontWeight: '600' }}>Wiiai's React-Native</Text>
+            <Text style={{fontSize: 20, fontWeight: '600'}}>
+              Hello, Welcome To
+            </Text>
+            <Text style={{fontSize: 20, fontWeight: '600'}}>
+              Wiiai's React-Native
+            </Text>
           </DropShadow>
         </View>
 
@@ -70,6 +74,12 @@ export const HomeScreen = observer(() => {
 
         <View style={{marginTop: 20, paddingHorizontal: 12}}>
           <Button onPress={() => store.todos?.addItem()}>Add Todo</Button>
+        </View>
+
+        <View style={{marginTop: 20, paddingHorizontal: 12}}>
+          <Button onPress={() => navigation.navigate('Table')}>
+            <Text style={{color: '#fff'}}>Go Table</Text>
+          </Button>
         </View>
 
         <View style={{marginTop: 20, paddingHorizontal: 12}}>
