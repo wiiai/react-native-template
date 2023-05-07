@@ -1,7 +1,5 @@
 ## 1. 研究背景
-react native 快速开发模板，希望有时间的朋友一起来完善，微信交流群：
-
-<img src="./screenshot/wx.png" style="width: 180px" />
+react native 快速开发模板，希望有时间的朋友一起来完善，微信交流群：阿菜学习群
 
 ## 2. 技术选型
 
