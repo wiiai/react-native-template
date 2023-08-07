@@ -13,6 +13,10 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-WowImRN-WowImRNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-WowImRN-WowImRNTests.a */; };
+		7918FF162A80D1A800094F96 /* RNTMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7918FF152A80D1A800094F96 /* RNTMapManager.m */; };
+		7918FF182A80D37500094F96 /* MyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7918FF172A80D37500094F96 /* MyButton.m */; };
+		7918FF1B2A80D3EE00094F96 /* MyButtonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7918FF1A2A80D3EE00094F96 /* MyButtonManager.m */; };
+		7918FF1E2A80D56300094F96 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7918FF1D2A80D56300094F96 /* CustomButton.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +45,12 @@
 		5709B34CF0A7D63546082F79 /* Pods-WowImRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WowImRN.release.xcconfig"; path = "Target Support Files/Pods-WowImRN/Pods-WowImRN.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-WowImRN-WowImRNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WowImRN-WowImRNTests.debug.xcconfig"; path = "Target Support Files/Pods-WowImRN-WowImRNTests/Pods-WowImRN-WowImRNTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-WowImRN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WowImRN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7918FF152A80D1A800094F96 /* RNTMapManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTMapManager.m; sourceTree = "<group>"; };
+		7918FF172A80D37500094F96 /* MyButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyButton.m; sourceTree = "<group>"; };
+		7918FF192A80D39900094F96 /* MyButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyButton.h; sourceTree = "<group>"; };
+		7918FF1A2A80D3EE00094F96 /* MyButtonManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyButtonManager.m; sourceTree = "<group>"; };
+		7918FF1C2A80D40700094F96 /* MyButtonManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyButtonManager.h; sourceTree = "<group>"; };
+		7918FF1D2A80D56300094F96 /* CustomButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = WowImRN/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-WowImRN-WowImRNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WowImRN-WowImRNTests.release.xcconfig"; path = "Target Support Files/Pods-WowImRN-WowImRNTests/Pods-WowImRN-WowImRNTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -92,6 +102,12 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				7918FF152A80D1A800094F96 /* RNTMapManager.m */,
+				7918FF172A80D37500094F96 /* MyButton.m */,
+				7918FF192A80D39900094F96 /* MyButton.h */,
+				7918FF1A2A80D3EE00094F96 /* MyButtonManager.m */,
+				7918FF1C2A80D40700094F96 /* MyButtonManager.h */,
+				7918FF1D2A80D56300094F96 /* CustomButton.m */,
 			);
 			name = WowImRN;
 			sourceTree = "<group>";
@@ -412,8 +428,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7918FF1E2A80D56300094F96 /* CustomButton.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				7918FF162A80D1A800094F96 /* RNTMapManager.m in Sources */,
+				7918FF1B2A80D3EE00094F96 /* MyButtonManager.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				7918FF182A80D37500094F96 /* MyButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

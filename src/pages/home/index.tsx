@@ -11,6 +11,8 @@ import {StackScreenProps} from '@react-navigation/stack';
 import {Button} from 'native-base';
 import DropShadow from 'react-native-drop-shadow';
 
+import MyButton from '../../native/MyButton'
+
 type IHomeNavigateProps = CompositeScreenProps<
   BottomTabScreenProps<MainTabParamList, 'Home'>,
   StackScreenProps<RootStackParamList>
@@ -70,6 +72,10 @@ export const HomeScreen = observer(() => {
               </View>
             );
           })}
+        </View>
+
+        <View style={{ paddingHorizontal: 10 }}>
+          <MyButton style={{ width: '100%', height: 50, backgroundColor: 'red' }} text="这是原生按钮" />
         </View>
 
         <View style={{marginTop: 20, paddingHorizontal: 12}}>
