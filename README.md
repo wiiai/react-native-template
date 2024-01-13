@@ -147,6 +147,8 @@ npx iconfont-rn
 修改 `ViewPropTypes` 的导入，node_modules/react-native-camera/src/RNCamera.js
 ![20230413141005](http://s3.airtlab.com/blog/20230413141005.png)
 
+可以在 `yarn` 装依赖之后，执行 `sh fix-camera.sh` 修复
+
 ## 4. 基础页面
 
 <table>
