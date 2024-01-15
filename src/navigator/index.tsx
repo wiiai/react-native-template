@@ -1,11 +1,3 @@
-/*
- * @Author: GaoXiong
- * @LastEditors: GaoXiong
- * @Date: 2023-01-04 18:54:11
- * @LastEditTime: 2023-04-11 23:47:42
- * @FilePath: /react-native-template/src/navigator/index.tsx
- * @Description: 
- */
 import React from 'react';
 import {observer} from 'mobx-react-lite';
 import {
