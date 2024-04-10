@@ -18,6 +18,7 @@ import AnimateScreen from '@/pages/animate';
 import {FsScreen} from '@/pages/fs';
 import { CameraScreen } from '@/pages/camera';
 import { TableScreen } from '@/pages/table';
+import { DownloadScreen } from '@/pages/download';
 
 export type RootStackParamList = {
   MainTab: NavigatorScreenParams<MainTabParamList>;
@@ -31,6 +32,7 @@ export type RootStackParamList = {
   Fs: undefined;
   Camera: undefined;
   Table: undefined;
+  Download: undefined;
 };
 
 export type RootStackNavigation = StackNavigationProp<RootStackParamList>;
@@ -69,6 +71,11 @@ function RootStackScreen() {
           name="Animate"
           options={hideHeaderOptions}
           component={AnimateScreen}
+        />
+        <RootStack.Screen
+          name="Download"
+          options={hideHeaderOptions}
+          component={DownloadScreen}
         />
         <RootStack.Screen
           name="Fs"

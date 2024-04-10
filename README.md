@@ -18,6 +18,7 @@ react native 快速开发模板，希望有时间的朋友一起来完善，加�
 | 日志工具 | [react-native-logs](https://github.com/onubo/react-native-logs)                                                         |
 | 动画     | [lottie-react-native](https://github.com/lottie-react-native/lottie-react-native) [lottie](https://airbnb.io/lottie/#/) |
 | 文件管理 | [react-native-fs](https://github.com/itinance/react-native-fs) |
+| 视频播放 | [react-native-video](https://www.npmjs.com/package/react-native-video#controls) |
 | 扫二维码 | [react-native-camera](https://react-native-camera.github.io/react-native-camera/) |
 | 阴影效果 | [react-native-drop-shadow](https://www.npmjs.com/package/react-native-drop-shadow) |
 | Table | [react-native-table-component](https://github.com/wiiai/react-native-table-component) |
