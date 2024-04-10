@@ -54,7 +54,9 @@ const VideoDemo = () => {
     if (!path) {
       return null;
     }
-    return <Video source={{uri: path }} controls style={{ width: 300, height: 150 }} />
+    return (
+      <Video source={{uri: path}} controls style={{width: 300, height: 150}} />
+    );
     //  onBuffer={this.onBuffer}                // Callback when remote video is buffering
     //  onError={this.videoError}               // Callback when video cannot be loaded
     //  style={styles.backgroundVideo} />
@@ -62,13 +64,11 @@ const VideoDemo = () => {
 
   return (
     <View>
-      <View>
-        <Button style={{marginTop: 10}} onPress={() => download()}>
-          <Text style={{color: '#fff'}}>Download Image</Text>
-        </Button>
-        <Text>{path}</Text>
-        {render()}
-      </View>
+      <Button style={{marginTop: 10}} onPress={() => download()}>
+        <Text style={{color: '#fff'}}>Download Video</Text>
+      </Button>
+      <Text>{path}</Text>
+      {render()}
     </View>
   );
 };
