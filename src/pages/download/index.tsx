@@ -43,6 +43,14 @@ const VideoDemo = () => {
     const res = RNFS.downloadFile({
       fromUrl: 'https://www.runoob.com/try/demo_source/movie.mp4',
       toFile: path,
+      begin: (res) => {
+        // 开始下载时回调
+        console.log('begin', Math.floor(Date.now()  / 1000), res);
+      },
+      progress: (res) => {
+        // 下载过程中回调，根据 options 中设置progressDivider:5，则在完成5%，10%，15%，...，100%时分别回调一次，共回调20次。
+        console.log('progress', Math.floor(Date.now()  / 1000), res);
+      }
     });
     const data = await res.promise;
     console.log(`write res`, data);

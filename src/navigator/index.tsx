@@ -16,9 +16,10 @@ import H5Screen from '@/pages/h5';
 import LoginScreen from '@/pages/login';
 import AnimateScreen from '@/pages/animate';
 import {FsScreen} from '@/pages/fs';
-import { CameraScreen } from '@/pages/camera';
-import { TableScreen } from '@/pages/table';
-import { DownloadScreen } from '@/pages/download';
+import {CameraScreen} from '@/pages/camera';
+import {TableScreen} from '@/pages/table';
+import {DownloadScreen} from '@/pages/download';
+import CategoryScreen from '@/pages/category';
 
 export type RootStackParamList = {
   MainTab: NavigatorScreenParams<MainTabParamList>;
@@ -33,6 +34,7 @@ export type RootStackParamList = {
   Camera: undefined;
   Table: undefined;
   Download: undefined;
+  Category: undefined;
 };
 
 export type RootStackNavigation = StackNavigationProp<RootStackParamList>;
@@ -83,6 +85,11 @@ function RootStackScreen() {
           component={FsScreen}
         />
         <RootStack.Screen
+          name="Category"
+          options={hideHeaderOptions}
+          component={CategoryScreen}
+        />
+        <RootStack.Screen
           name="Camera"
           options={hideHeaderOptions}
           component={CameraScreen}
@@ -92,9 +99,14 @@ function RootStackScreen() {
           options={hideHeaderOptions}
           component={TableScreen}
         />
+  
       </RootStack.Group>
       <RootStack.Group screenOptions={{presentation: 'modal'}}>
-        <RootStack.Screen options={{headerShown: false}} name="Login" component={LoginScreen} />
+        <RootStack.Screen
+          options={{headerShown: false}}
+          name="Login"
+          component={LoginScreen}
+        />
       </RootStack.Group>
     </RootStack.Navigator>
   );
