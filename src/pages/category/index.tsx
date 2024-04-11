@@ -1,6 +1,9 @@
 import {ScrollView, StyleSheet, View} from 'react-native';
 import data from './data.json';
-import {TouchableHighlight} from 'react-native-gesture-handler';
+import {
+  TouchableHighlight,
+  TouchableWithoutFeedback,
+} from 'react-native-gesture-handler';
 import BPage from '@/baseUI/BPage';
 import {useEffect, useState} from 'react';
 import {Center, Flex, HStack, Image, Text} from 'native-base';
@@ -15,21 +18,37 @@ const CategoryScreen = () => {
 
   const renderMenu = () => {
     return treeData.map(it => {
+      const stl =
+        current === it.id
+          ? {
+              borderRightWidth: 3,
+              borderRightColor: 'blue',
+              borderStyle: 'solid' as const,
+              backgroundColor: '#fff',
+            }
+          : {
+              borderRightWidth: 3,
+              borderRightColor: 'transparent',
+              borderStyle: 'solid' as const,
+            };
       return (
-        <TouchableHighlight key={it.title}>
-          <Text
-            style={{
-              height: 40,
-              fontSize: 16,
-              textAlign: 'center',
-              lineHeight: 40,
-              borderRightWidth: 2,
-              borderRightColor: '#333',
-              borderStyle: 'solid',
-            }}>
-            {it.title}
-          </Text>
-        </TouchableHighlight>
+        <TouchableWithoutFeedback
+          key={it.title}
+          onPress={() => {
+            setCurrent(it.id);
+          }}>
+          <View style={stl}>
+            <Text
+              style={{
+                height: 40,
+                fontSize: 16,
+                textAlign: 'center',
+                lineHeight: 40,
+              }}>
+              {it.title}
+            </Text>
+          </View>
+        </TouchableWithoutFeedback>
       );
     });
   };
@@ -41,32 +60,39 @@ const CategoryScreen = () => {
     }
     const children = list.map((it, index) => {
       return (
-        <View
-          key={index}
-          style={{
-            marginRight: 10,
-            marginTop: 10,
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}>
-          <View style={{width: 64, height: 64, backgroundColor: '#eee'}}></View>
-          <Text style={{fontSize: 13, color: '#666', marginTop: 4}}>
-            {it.title}
-          </Text>
-        </View>
+        <TouchableHighlight>
+          <View
+            key={index}
+            style={{
+              marginRight: 10,
+              marginTop: 10,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            <View
+              style={{width: 64, height: 64, backgroundColor: '#eee'}}></View>
+            <Text style={{fontSize: 13, color: '#666', marginTop: 4}}>
+              {it.title}
+            </Text>
+          </View>
+        </TouchableHighlight>
       );
     });
 
     return (
       <View>
-        <View style={{ marginRight: 10 }}>
-          <Image style={{ width: '100%', height: 150 }} source={{ uri: 'http://s2.airtlab.com/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D.png' }} />
+        <View style={{marginRight: 10}}>
+          <Image
+            style={{width: '100%', height: 150}}
+            source={{
+              uri: 'http://s2.airtlab.com/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D.png',
+            }}
+          />
         </View>
-        <Text fontSize="sm" style={{ marginTop: 20 }}>课程分类</Text>
-        <Flex
-          direction="row"
-          wrap="wrap"
-          style={{flex: 1, height: '100%'}}>
+        <Text fontSize="sm" style={{marginTop: 20}}>
+          课程分类
+        </Text>
+        <Flex direction="row" wrap="wrap" style={{flex: 1, height: '100%'}}>
           {children}
         </Flex>
       </View>
@@ -88,7 +114,7 @@ const CategoryScreen = () => {
               width: '100%',
               height: '100%',
               ...styles.contentContainer,
-              paddingLeft: 10
+              paddingLeft: 10,
             }}>
             {renderList()}
           </ScrollView>
@@ -99,9 +125,7 @@ const CategoryScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  contentContainer: {
-    paddingVertical: 10,
-  },
+  contentContainer: {},
 });
 
 export default CategoryScreen;
