@@ -81,7 +81,7 @@ const CategoryScreen = () => {
 
     return (
       <View>
-        <View style={{marginRight: 10}}>
+        <View style={{marginRight: 10, marginTop: 10 }}>
           <Image
             style={{width: '100%', height: 150}}
             source={{
@@ -100,7 +100,7 @@ const CategoryScreen = () => {
   };
 
   return (
-    <BPage showNavBar={true}>
+    <BPage showNavBar={true} title="Mooc">
       <View style={{flex: 1, display: 'flex', flexDirection: 'row'}}>
         <View style={{width: 80, height: '100%', backgroundColor: '#eee'}}>
           <ScrollView contentContainerStyle={styles.contentContainer}>
