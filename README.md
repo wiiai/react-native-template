@@ -1,5 +1,5 @@
 ## 1. 研究背景
-react native 快速开发模板，希望有时间的朋友一起来完善，加微信进群：gaoxiong957
+react native 快速开发模板，有问题可以提 issue
 
 ## 2. 技术选型
 
